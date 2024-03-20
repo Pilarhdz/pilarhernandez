@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="nav('/loginpage')">Login</ion-button>
+      <ion-button (click)="nav('/signin')">Signin</ion-button>
+      <ion-button (click)="nav('/algoritmos-simples')">Algoritmos</ion-button>
+      <ion-button (click)="nav('/conwaygame')">Conway game</ion-button>
+      <ion-button (click)="nav('/infinitescroll')">Infinite Scroll</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="popup" id="about">
+    <div class="popup-container">
+      <div class="popup-header">
+        <div class="button-container">
+          <button class="close-btn circle-btn red">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button class="close-btn circle-btn yellow">
+            <i class="fa-solid fa-window-minimize"></i>
+          </button>
+          <button class="maximize-btn circle-btn green">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </button>
+        </div>
+      </div>
+      <div class="popup-body about-container">
+        <div class="img-frame">
+          <img src="../../assets/perfil.jpeg" alt="" />
+        </div>
+        <div class="hero-content">
+          <h1>Pilar Hernandez Vargas</h1>
+          <p>
+            I am Pilar Hernandez Vargas, I am 19 years old, I am from Salamanca and I live in Salamanca. 
+            I am currently a student of a degree in information technology. 
+            I consider myself a person with natural leadership who is capable of working with people with strong character.
+             I have a high capacity to manage the office parcel
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

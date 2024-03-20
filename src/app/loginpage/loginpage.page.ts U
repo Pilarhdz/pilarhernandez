@@ -1,0 +1,37 @@
+import { Component, OnInit } from '@angular/core';
+import { NavController, AlertController } from '@ionic/angular';
+//importar componente de login
+@Component({
+  selector: 'app-loginpage',
+  templateUrl: './loginpage.page.html',
+  styleUrls: ['./loginpage.page.scss'],
+})
+export class LoginpagePage implements OnInit {
+//ionic generate page login
+  user:string = '';
+  password:string = '';
+
+
+constructor(private navController:NavController, private alertController:AlertController) { }
+  ngOnInit() {
+  }
+  async mandarMensaje(mensaje:string,
+                      titulo:string){
+    const alerta = await this.alertController.create({
+      header:titulo,
+      message:mensaje,
+      buttons:['Cerrar']
+    });
+    await alerta.present();
+  }
+  async login(){
+    await this.mandarMensaje('hola mundo!', 
+                             'notificacion');
+  }
+  // ionic start
+  //wizard? N
+  //angular
+
+  // npm install -g @ionic/cli
+}
+
